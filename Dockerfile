@@ -1,4 +1,7 @@
-FROM microsoft/aspnet:4.7.1-windowsservercore-1709
+ARG REPO=mcr.microsoft.com/dotnet/framework/aspnet
+FROM $REPO:4.7.2-windowsservercore-ltsc2019
+
+SHELL ["powershell"]
 
 WORKDIR /
 RUN $ProgressPreference = 'SilentlyContinue'; \
